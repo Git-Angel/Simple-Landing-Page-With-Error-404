@@ -107,5 +107,12 @@ a {
 
 
 /*--------------------------------------------------------------
-# Stage Section
+# media query Section
 --------------------------------------------------------------*/
+@media (max-width: 796px) {
+    .sorry::after {
+content: We looked everywhere for this page
+Are you sure the website url is correct
+Get in touch with the site owner
+}   
+}
