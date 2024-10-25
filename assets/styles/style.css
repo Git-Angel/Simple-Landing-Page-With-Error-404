@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Handlee', serif;
-    /* overflow-x: hidden; */
+   /* overflow-x: hidden; */
 }
 
 a {
@@ -39,29 +39,47 @@ a {
 }
 
 .navbar .navbar-brand {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* -------------------home---------------- */
 .home {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    /*background-image: url("/assets/images/img.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .home-container {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+    
 }
 
-.home-container .layer {
-    background-color: rgba(110, 84, 61, 0.6);
+.styl-img img{
+    width: 70%;
+    margin: 30px;
+    border-radius:20px;
 }
 
-.home-container .layer .home-text h1 {
+.home-text{
+    width: 50%;
+    font-size: medium;
+    margin: 30px;
+    border-radius:20px;
+    padding-top: 100px;
+    background-color: cadetblue;
+}
+
+.home-text button{
+    padding: 15px;
+    margin: 10px;
+}
+.home-text button :hover{
+    outline-color: #4c2a2a;
+    color: rgb(171, 121, 146);
+}
+
+/*.home-container .layer .home-text h1 {
     font-size: 50px;
     position: relative;
     padding-bottom: 25px;
@@ -75,10 +93,15 @@ a {
     width: 10%;
     bottom: 0;
     left: calc(50% - 20px);
-}
+}*/
 
 .home-container .layer .home-text p {
     color: rgba(255, 255, 255,);
+}
+.four{
+    font-size: 20rem; 
+    font-weight:bolder; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .home-container .layer .home-text button {
@@ -108,5 +131,119 @@ a {
 
 /*--------------------------------------------------------------
 # media query Section
---------------------------------------------------------------*/
- 
+
+
+Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {...}
+
+ Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+
+ Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...} */
+
+
+@media (max-width: 1024px){
+    .home-container{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+    }
+    .four{
+        font-size: 15rem; 
+    }
+    .fourr{
+        height: 100%;
+        width: 100%;
+    }
+    .home-text{
+        width: 70%;
+        margin-top: 2px;
+        font-size: small;
+    }
+    .styl-img img{
+        margin-top: 2px;
+    }
+    }  
+
+@media (max-width: 768px){
+.home-text{
+    height: 100%;
+    width: 82%;  
+}
+.styl-img img{
+    height: 80%;
+    width: 81%;
+    margin-bottom: 10px;
+}
+.four{
+    font-size: 5rem; 
+}
+.fourr img{
+    height: 50%;
+    width: 50%;
+}
+}
+
+@media (max-width: 425px){
+    .home-text{
+        height: 50%;
+        width: 100%;
+        font-size: x-small;  
+    }
+    .styl-img img{
+        height: 80%;
+        width: 86%;
+        margin-bottom: 10px;
+    }
+    .home-container{
+        margin: 0%;
+    }
+    
+    .four{
+        font-size: 5rem; 
+    }
+    .fourr img{
+        height: 50%;
+        width: 50%;
+    }
+    .home-text h3{
+        font-size: medium;
+    }
+    }
+
+    @media (max-width: 375px){
+        .home-text{
+            height: 50%;
+            width: 100%;  
+        }
+        .styl-img img{
+            height: 50%;
+            width: 95%;
+            margin-bottom: 10px;
+        }
+        .home-container{
+            margin: 0%;
+        }
+    }
+    @media (max-width: 320px){
+        .home-text{
+            height: 50%;
+            width: 80%;  
+        }
+        .styl-img img{
+            height: 50%;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        .home-container{
+            margin: 0%;
+        }
+    }
